@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: scroll;
+background: rgb(241,225,194);
+background: radial-gradient(circle, rgba(241,225,194,1) 0%, rgba(252,188,152,1) 100%);
+}
+.menubar{
+  padding-bottom: 80px;
+  background-color: #f1e1c2;
+  box-shadow: 10px 3px 50px 10px #edd1d1;
+}
+nav {
+  position: absolute;
+  top: 15%;
+   right: 0;
+  left: 0;
+  display: table;
+  margin: 0 auto;
+}
+
+nav a {
+  position: relative;
+  width: 33.333%;
+  display: table-cell;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  font-family: jackpot;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-shadow: 2px 2px white;
+}
+ 
+#indicator {
+  position: absolute;
+  left: 70%;
+  bottom: 0;
+  width: 170px;
+  height: 3px;
+  background-color: black;
+  border-radius: 10px;
+  transition: 0.5s ease left;
+}
+
+nav a:hover {
+  text-shadow: 2px 2px red;
+}
+nav a:hover:before,
+nav a:hover:after {
+  transform: scale(1);
+}
+nav a:nth-child(1):hover ~ #indicator {left: 9%;width: 100px;}
+nav a:nth-child(2):hover ~ #indicator {left: 37%;width: 170px;}
+nav a:nth-child(3):hover ~ #indicator {}
+
+
+.head1 {
+  padding-top: 20px;
+  display: table;
+  margin: 0 auto;
+  font-size: 50px;
+  font-smooth: ;
+  font-family: FluoGums;
+  color: #facc91;
+  -webkit-text-stroke: 1px #8f7554;
+  text-shadow: 5px 1px white;
+}
+
+.card{
+  animation: 2s ease-out 0s 1 slideInFromLeft;
+  float:left; 
+  margin-top: 20px;
+  margin-left: 100px;
+  width: 350px;
+  background: #f1f1f1;
+  overflow: hidden;
+  font-family: "montserrat",sans-serif;
+  box-shadow: 0 0 30px #00000070;
+}
+.card2{
+  animation: 2s ease-out 0s 1 slideInFromLeft;
+  float:left; 
+  margin-top: 20px;
+  margin-left: 190px;
+  width: 350px;
+  background: #f1f1f1;
+  overflow: hidden;
+  font-family: "montserrat",sans-serif;
+  box-shadow: 0 0 30px #00000070;
+}
+.top-section{
+  position: relative;
+}
+.top-section img{
+  height: 350px;
+  width: 100%;
+}
+
+.info-section{
+  text-align: center;
+  padding: 0px;
+  padding-top: 0;
+  color: #333;
+}
+@font-face {
+  font-family: FluoGums;
+  src: url(FluoGums.ttf);
+}
+@font-face {
+  font-family: jackpot;
+  src: url(jackpot.ttf);
+}
+@font-face {
+  font-family: Sketch;
+  src: url(Sketch.otf);
+}
+@font-face {
+  font-family: SugarpunchDEMO;
+  src: url(SugarpunchDEMO.otf);
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
