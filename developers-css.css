@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: scroll;
+  background-color: #1a1a1a;
+  background: radial-gradient(circle, rgba(28, 28, 28, 1) 0%, rgba(45, 45, 45, 1) 100%);
+}
+
+.menubar {
+  padding-bottom: 50px;
+  background-color: #1a1a1a;
+}
+
+nav {
+  position: absolute;
+  top: 15%;
+  right: 0;
+  left: 0;
+  display: table;
+  margin: 0 auto;
+}
+
+nav a {
+  position: relative;
+  width: 33.333%;
+  display: table-cell;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-family: GothamSSm-Light;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-shadow: 2px 2px #1a1a1a;
+}
+
+.shadow {
+  box-shadow: 0px 0px 1000px -1000px #1C1C1C;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  padding-bottom: 190px;
+  animation: slideShow 10s linear infinite;
+  background-position: 100% 50%;
+}
+ 
+#indicator {
+  position: absolute;
+  left: 70%;
+  bottom: 0;
+  width: 170px;
+  height: 3px;
+  background-color: black;
+  border-radius: 10px;
+  transition: 0.5s ease left;
+}
+
+nav a:hover {
+  text-shadow: 2px 2px #1a1a1a;
+}
+
+nav a:hover:before,
+nav a:hover:after {
+  transform: scale(1);
+}
+
+nav a:nth-child(1):hover ~ #indicator {}
+nav a:nth-child(2):hover ~ #indicator {
+  width: 100px;
+  left: 40%;
+}
+nav a:nth-child(3):hover ~ #indicator {
+  width: 125px;
+  left: 70%;
+}
+
+.logo {
+  width: 180px;
+  height: auto;
+  position: absolute;
+  padding-left: 250px;
+}
+
+.head1 {
+  padding-top: 50px;
+  display: table;
+  margin: 0 auto;
+  font-size: 100px;
+  font-smooth: ;
+  font-family: Sporter;
+  color: white;
+  text-shadow: 3px 1px #1a1a1a;
+}
+
+.card{
+  animation: 2s ease-out 0s 1 slideInFromLeft;
+  float:left; 
+  margin-top: 20px;
+  margin-left: 80px;
+  width: 270px;
+  height: 300px;
+  background: black;
+  overflow: hidden;
+  font-family: "montserrat",sans-serif;
+  box-shadow: 0 0 30px #1f055c;
+}
+
+.top-section {
+  height: 250px;
+  overflow: hidden;
+}
+
+.info-section {
+  height: 50px;
+  overflow: hidden;
+}
+
+.info-section h2{
+  color: white;
+}
+
+.card2{
+  animation: 2s ease-out 0s 1 slideInFromLeft;
+  float:left; 
+  margin-top: 20px;
+  margin-left: 80px;
+  width: 270px;
+  height: 300px;
+  background: black;
+  overflow: hidden;
+  font-family: "montserrat",sans-serif;
+  box-shadow: 0 0 30px #1f055c;
+}
+.top-section{
+  position: relative;
+}
+.top-section img{
+  height: 350px;
+  width: 100%;
+}
+
+.info-section{
+  text-align: center;
+  padding: 0px;
+  padding-top: 0;
+  color: #333;
+}
+@font-face {
+  font-family: Sporter;
+  src: url(Sporter.ttf);
+}
+
+@font-face {
+  font-family: GothamSSm-Light;
+  src: url(GothamSSm-Light.ttf);
+}
+
+@font-face {
+  font-family: GothamSSm-Bold;
+  src: url(GothamSSm-Bold.ttf);
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
